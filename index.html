@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anavasi — макеты этапа 2</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body>
+  <header class="review-header"><strong>ANAVASI <span>/ ЭТАП 2</span></strong><span>Новые состояния одобрены · сверка с Figma · версия 2</span></header>
+  <main class="workbench">
+    <aside class="scenarios"><h1>Новые состояния</h1><p>Новые макеты одобрены. Страницы, существующие в Figma, реализуются из актуального Design; веб-оболочка показывает только переходы.</p><nav id="scenarios" aria-label="Сценарии макетов"></nav></aside>
+    <section class="preview" aria-label="Предпросмотр">
+      <div class="controls">
+        <label>Экран<select id="width"><option value="390">Стандартный · 390</option><option value="320">Узкий · 320</option></select></label>
+        <label>Текст<select id="text"><option value="1">Системный</option><option value="1.15">Средний</option><option value="1.3">Большой</option></select></label>
+        <label>Системный шрифт<select id="system"><option value="1">100%</option><option value="1.3">130%</option><option value="2">200%</option></select></label>
+      </div>
+      <div class="phone" id="phone"><div class="statusbar" aria-hidden="true"><span>9:41</span><span>▴ ▰</span></div><div id="screen"></div><div class="systembar" aria-hidden="true"><i></i></div></div>
+      <div class="preview-actions"><button id="back">← Назад в сценарии</button><button id="reset">Сбросить пример</button></div>
+    </section>
+    <aside class="review-notes"><div class="eyebrow">НА ПРОВЕРКУ</div><h2 id="scenario-title"></h2><p id="scenario-note"></p><div class="divider"></div><h3>Это визуальный прототип</h3><p>Даты, события, новости и PDF — условные примеры. Загрузка, сохранение и запись региона показаны состояниями, без реальных операций.</p><p>Иллюстрации и палитра — из вашего Design. Исходный Figma и Android-приложение не изменены.</p><h3>Как проверять</h3><p>Оцените расположение, понятность действий и длинные подписи. Переключите три размера текста и узкий экран. Шрифт 200% — проверка предельного случая, а не точная копия Android.</p><p id="review-warning" role="status"></p><h3>Важные отличия</h3><p>В дневном календаре нет нижней панели. Неполное покрытие региона не означает отсутствие олимпиады. При ошибке обновления доступные данные остаются на экране.</p></aside>
+  </main>
+</body>
+</html>
