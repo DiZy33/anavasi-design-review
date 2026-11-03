@@ -2,11 +2,11 @@
 
 Existing accepted Stage 2 review: https://dizy33.github.io/anavasi-design-review/
 
-## Stage 3 — proposed revision 2 (2026-11-03)
+## Stage 3 — owner-accepted revision 2 (2026-11-03)
 
 Review: https://dizy33.github.io/anavasi-design-review/stage-3/index.html#C01
 
-Revision 1 was returned with ten owner corrections; its historical source is commit `1655153`. **Revision 2 awaits owner approval.** Publication and browser checks are not design acceptance.
+Revision 1 was returned with ten owner corrections; its historical source is commit `1655153`. **The owner accepted revision 2 on 2026-11-03**, design source commit `07aff6e`, covering all 50 listed states within their recorded scope. Task 2 is complete. Existing-page scaffolds do not replace Figma, chat visuals remain provisional and L09 remains future-only. Later corrections will be given directly to the agent implementing the corresponding task and recorded in the existing project documents. Publication/browser checks and this explicit owner acceptance are separate evidence.
 
 50 directly addressable review states: C01/C03/C04/C06–C10 owned courses; G01–G10 guide; L01–L05/L09 lesson/player/future availability; A01–A07 answers; E01–E04 personal-event overlays; D01–D07 provisional chats; P01–P06 profile; H01/H02 Home addition. The sidebar names every state and review intent. Old C02 redirects to C01; standalone progress A08 redirects to C03. Removed fullscreen/material/calendar/drawer routes are not implementation references.
 
