@@ -201,6 +201,10 @@ function finishRender(){
  }
  if(current.id==='H01'||current.id==='H02'||current.id==='H03')$('.app-header h1').textContent='';
  if(['T02','E11'].includes(current.id))$('.bottom-nav')?.remove();
+ if(current.id==='E01'){$('#event-date').value=data.event.date;$('#app-content>p.small').textContent='Из дня: дата по умолчанию — открытый день, '+data.event.date.split('-').reverse().join('.')+'.';}
+ if(current.id==='E03'){const p=document.createElement('small');p.textContent='Часовой пояс примера: Europe/Moscow. В Android при создании сохраняется текущий часовой пояс.';$('#time-field').append(p);}
+ if($('#event-form'))dirty=JSON.stringify(data.event)!==JSON.stringify(savedEvent);
+ if(current.id==='H04'){const b=$('#screen [data-go="G06"]');const a=document.createElement('a');a.className='secondary';a.href='https://dizy33.github.io/anavasi-design-review/index.html#about';a.target='_blank';a.rel='noopener';a.textContent='Олимпиады · принятый раздел ↗';b.replaceWith(a);}
  if(current.id==='E04'&&!data.event.date){const f=$('#event-date');f.setAttribute('aria-invalid','true');const p=document.createElement('p');p.className='save-status error';p.textContent='Выберите дату события.';f.after(p);}
 }
 function source(s){const nodes={C:'1:225',G:'1:7859',L:'1:225',A:'1:225',E:'27:11655',T:'1:454',D:'1:338',P:'27:9657',H:'1:7859'};return `<a href="https://www.figma.com/design/gO7czKDJEPs8z3aG2YPlAE?node-id=${nodes[s.prefix].replace(':','-')}" target="_blank" rel="noopener">Figma Design · ${nodes[s.prefix]} ↗</a>${s.prefix==='L'?'<p>Верхний блок: 27:11699.</p>':''}<p>${['L','D','P','H','T'].includes(s.prefix)?'Существующая композиция — Figma. Дополнения и данные — предложение ревизии 1.':'Новые состояния на основе визуального языка Anavasi.'}</p>`;}
@@ -229,5 +233,5 @@ document.addEventListener('submit',e=>{e.preventDefault();if(e.target.id==='even
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();back();}if(e.key==='Tab'&&$('.dialog')){const all=[...$('.dialog').querySelectorAll('button,a,input,textarea,select')].filter(el=>!el.disabled);const first=all[0],last=all.at(-1);if(e.shiftKey&&(document.activeElement===first||document.activeElement===$('.dialog'))){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}});
 function scale(){const n=Number($('#text').value)*Number($('#system').value);$('#phone').style.width=$('#width').value+'px';$('#phone').style.setProperty('--scale',n);document.body.dataset.large=n>=1.5;}
 const baseShow=show;
-show=function(id,push=true){baseShow(id,push);finishRender();};
+show=function(id,push=true){if(id==='E01'&&current?.id==='T02')data.event.date='2026-11-06';baseShow(id,push);finishRender();};
 ['width','text','system'].forEach(id=>$('#'+id).addEventListener('change',scale));$('#back').onclick=back;$('#reset').onclick=()=>{data=fixture();savedAnswer=data.answer;savedDrafts={...data.drafts};savedEvent={...data.event};guideDone.clear();pendingWrite=false;stack=[];show(current.id,false);};$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);$('#copy').textContent='Ссылка скопирована';}catch{$('#copy').textContent='Ссылка в адресной строке';}setTimeout(()=>$('#copy').textContent='Ссылка на состояние',1800);};window.addEventListener('hashchange',()=>show(location.hash.slice(1),false));show(location.hash.slice(1)||'C01',false);
