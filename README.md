@@ -23,7 +23,7 @@ Owner corrections implemented:
 
 Navigation checked: owned list→overview→lesson→player→fullscreen→same lesson; per-lesson tabs/answers/checkpoints; course→curator→Back to course versus list→curator→Back to list; day/month→event overlay→cancel/retry/delete→same calendar; failed answer/draft save→stay/retry/discard; guide→practical action→originating step. The existing private project DESIGN_HANDOFF contains the full M01–M14 transition/dependency matrix and acceptance record.
 
-Browser QA: 50 states × 18 width/app/system combinations = 900 renders, 50 mobile-viewport checks and 94 interaction assertions. Inspected normal/extreme-font screenshots. Browser checks cannot certify Android lifecycle, native accessibility, keyboard or persistent writes.
+Browser QA: 50 states × 18 width/app/system combinations = 900 renders, 50 mobile-viewport checks and 97 interaction assertions. Inspected normal/extreme-font screenshots. Browser checks cannot certify Android lifecycle, native accessibility, keyboard or persistent writes.
 
 This prototype stores synthetic edits only in memory until reload/reset. Video controls simulate states without real playback. No backend, actual sending, durable storage, analytics or remote runtime asset dependency is introduced. Native pickers are handoffs. Anonymous initials replace real Figma identities.
 
