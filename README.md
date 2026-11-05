@@ -1,5 +1,9 @@
 # Anavasi — design review
 
+## Stage 4 — revision 1 for review
+
+[Open Stage 4](https://dizy33.github.io/anavasi-design-review/stage-4/index.html#C01). The 29 states cover course acquisition, library exceptions, daily learning, progress, settings, local chat interactions, Back and guide practice. The prototype uses synthetic content and simulated saves. Use the controls to check Russian and English, narrow screens and larger text. Existing Figma screens remain the visual source.
+
 Existing accepted Stage 2 review: https://dizy33.github.io/anavasi-design-review/
 
 ## Stage 3 — owner-accepted revision 2 (2026-11-03)
