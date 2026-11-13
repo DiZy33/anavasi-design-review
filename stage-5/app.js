@@ -157,9 +157,10 @@ const sources=[
  ['Код / Code','64:14181','Deferred; no code entry, resend, email or SMS delivery in current increment.'],
  ['Новый пароль / New password','64:17199','Deferred; no functioning reset route claimed.'],
 ];
-const ids=Object.keys(states);
-let current='A01';
-let previous='A02';
+const groupOrder=['Вход','Курс','Задания','Преподаватель','Рейтинг','На каждый день','Общение','Аккаунт','Уведомления','Видео','Сохранение'];
+const ids=Object.keys(states).sort((a,b)=>groupOrder.indexOf(states[a].group)-groupOrder.indexOf(states[b].group)||a.localeCompare(b,'en',{numeric:true}));
+let current='T02';
+let previous='T01';
 const history=[];
 function go(id){if(!states[id])return;if(id!==current){history.push(current);previous=current;}location.hash=id;render();}
 function nav(){return `<nav class="bottom-nav" aria-label="${t('Навигация приложения (макет)','App navigation (prototype)')}">`+[[t('Дом','Home'),'figma_nav_home.png','64:17399'],[t('Календарь','Calendar'),'figma_nav_calendar_glyph.png','64:19942'],[t('Уроки','Lessons'),'figma_nav_lessons_glyph.png','64:17234'],[t('Чат','Chat'),'figma_nav_chat_glyph.png','64:20092'],[t('Профиль','Profile'),'figma_profile_person.png','64:20204']].map(([title,img,node])=>`<button type="button" data-action="source" data-node="${node}"><img src="${art}${img}" alt=""><span>${title}</span></button>`).join('')+'</nav>';}
