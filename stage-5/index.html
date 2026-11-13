@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Avansi · Этап 5 · Дизайн-ревью R1</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a class="wordmark" href="../stage-4/index.html">AVANSI <span>/ дизайн-ревью</span></a><span>ЭТАП 5 · R1 · НА СОГЛАСОВАНИИ</span></header>
+  <main class="workbench">
+    <aside class="index"><p class="eyebrow">ПРОДОЛЖЕНИЕ ПРИЛОЖЕНИЯ</p><h1>Следующий<br>шаг Avansi</h1><p>Новые экраны и состояния.<br>Существующий дизайн сохраняется.</p><label class="search">Найти состояние<input id="search" type="search" placeholder="Название или ID"></label><nav id="index" aria-label="Состояния макета"></nav></aside>
+    <section class="preview" aria-label="Интерактивный макет">
+      <div class="controls">
+        <label>Язык<select id="language"><option value="ru">Русский</option><option value="en">English</option></select></label>
+        <label>Текст<select id="preset"><option value="1">Обычный</option><option value="1.15">Крупный</option><option value="1.3">Очень крупный</option></select></label>
+        <label>Система<select id="system"><option value="1">100%</option><option value="2">200%</option></select></label>
+        <label>Ширина<select id="width"><option value="390">390</option><option value="360">360</option><option value="320">320</option></select></label>
+        <label class="check"><input id="long" type="checkbox">Длинный ник</label>
+        <label class="check"><input id="ime" type="checkbox">Область IME</label>
+      </div>
+      <div class="device" id="device"><div class="statusbar" aria-hidden="true"><span>9:41</span><span>••• ▰</span></div><div id="surface" class="surface"></div><div class="ime" id="ime-area" hidden>Область системной клавиатуры · Native keyboard area</div><div class="systembar" aria-hidden="true"><span></span></div></div>
+      <div class="pager"><button id="previous" type="button">← Предыдущее</button><span id="counter"></span><button id="next" type="button">Следующее →</button></div>
+      <p class="caption">Интерактивный образец с вымышленными данными. Все сетевые действия — симуляция; данные никуда не отправляются.</p>
+    </section>
+    <aside class="notes"><p class="eyebrow" id="state-id"></p><h2 id="state-title"></h2><p id="state-note"></p><h3>Проверьте сценарий</h3><p id="state-check"></p><h3>Основа</h3><p id="state-source"></p><h3>Граница реализации</h3><p id="state-contract"></p><a id="figma" target="_blank" rel="noreferrer">Открыть исходный Figma ↗</a><p class="scope">R1 — предложение для согласования. Это не готовая Android-функция. Нативные разрешения, выбор фото, клавиатура и системный Back остаются Android. Переключатель IME лишь уменьшает доступную область.</p><a href="#coverage">Все источники и покрытие ↓</a></aside>
+  </main>
+  <section id="coverage" class="coverage"><p class="eyebrow">FIGMA DESIGN · ИНВЕНТАРИЗАЦИЯ 13.11.2026</p><h2>Что сохраняем и что добавляем</h2><p>Приветствие, регистрация и вход используют существующие композиции. Здесь показаны только отсутствующие окна, состояния и согласованные изменения полей. Экраны восстановления остаются отложенными. «Как выбрать» не перерабатывается.</p><div id="coverage-table"></div><h3>Новые состояния R1</h3><div id="manifest"></div></section>
+  <noscript>Для просмотра переходов включите JavaScript. Макет не подключается к серверу.</noscript>
+</body>
+</html>
